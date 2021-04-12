@@ -1,0 +1,77 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks'
+import Div from '../Div'
+
+<Meta title='Foundation/Div/Documentation' />
+
+# Div
+
+#### The Box component serves as a wrapper component for most of the CSS utility needs.
+
+<br />
+
+<Story name='Overview'>
+  <div>
+    <Div
+      width={0.2}
+      padding={2}
+      margin={0}
+      bg='primary'
+      color={'white'}
+      boxShadow={'sm'}
+    >
+      Div
+    </Div>
+  </div>
+</Story>
+
+<br /><br />
+
+## Usage
+
+```jsx
+import { Div } from 'component-set';
+
+<Div>
+  /** Content here **/
+</Div>
+```
+
+<br /><br />
+
+## Width
+<Story name='Width'>
+  <div>
+    <Div width='200px' p={2} bg='primary' color='white' my={10}>Custom Width (px)</Div>
+    <Div width='100%' p={2} bg='primary' color='white' my={10}>Full Width</Div>
+    <Div width='50%' p={2} bg='primary' color='white' my={10}>Half Width (ratio)</Div>
+  </div>
+</Story>
+
+```jsx
+<Div width='200px'>Custom Width (px)</Div>
+
+<Div width='100%'>Full Width</Div>
+
+<Div width='50%'>Half Width (ratio)</Div>
+```
+
+<br /><br />
+
+## Color
+You can set color and background-color.
+
+<Story name='Color'>
+  <div>
+    <Div bg='primary' color='white' padding={2} my={10}>Box Content</Div>
+    <Div bg='secondary' color='white' padding={2} my={10}>Box Content</Div>
+  </div>
+</Story>
+
+```jsx
+<Div bg='primary' color='white'>Box Content</Div>
+
+<Div bg='secondary' color='white'>Box Content</Div>
+```
+
+## Properties
+<Props of={Div} />

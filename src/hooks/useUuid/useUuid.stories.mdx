@@ -1,0 +1,24 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { useUuid } from '.';
+
+<Meta title='hooks/useUuid'/>
+
+Generates Unique ID on first render to avoid regeneration on each state change.
+
+Using this custom hooks. we store the Unique ID in react state.
+
+###### Generate a Unique ID:
+
+`uuid` generated is unique on each render and persist until the parent component is unmounted.
+```jsx
+  const { uuid, generateUuid } = useUuid()
+```
+
+To generate new unique ID call `generateUuid` and the `uuid` gets updated.
+```jsx
+  const { uuid, generateUuid } = useUuid()
+  generateUuid() // updates uuid value.
+```
+
+#### Usage:
+used in keeping unique id for textfields to keep reference between label and input field for accessible textfields.

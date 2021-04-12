@@ -1,0 +1,40 @@
+import { Meta, Props, Story } from '@storybook/addon-docs/blocks'
+
+<Meta title='Hooks/useClamp' />
+
+# useClamp()
+
+#### Hook for keeping a value or array of values between range
+
+<br /><br />
+
+## Usage
+
+Defining a new clamp
+
+```jsx
+import { useClamp } from '../hooks'
+
+const clampedValue = useClamp(value, 0, 100);
+```
+
+`useClamp` accepts 3 arguments;
+- `value`: number or number of arrays to clamp
+- `min`: minimum value
+- `max`: maximum value
+
+
+<br />
+
+## Multiple values
+
+With passing array of numbers as first arguments will keep sum of values between range.
+- Each value will stay above the min value.
+- If total of the calues exceeds maximum value, each values will have the weighted values.
+
+
+```jsx
+const clampedValue = useClamp([20, 80, 50, 50], 0, 100);
+// clampedValue = [10, 40, 25, 25]
+```
+

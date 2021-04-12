@@ -1,0 +1,162 @@
+{
+  "name": "componentset",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "devDependencies": {
+    "@babel/cli": "^7.10.3",
+    "@babel/core": "^7.10.3",
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/plugin-proposal-decorators": "^7.10.3",
+    "@babel/plugin-transform-modules-commonjs": "^7.10.1",
+    "@babel/preset-env": "^7.10.3",
+    "@babel/preset-react": "^7.10.1",
+    "@babel/preset-typescript": "^7.10.4",
+    "@babel/register": "^7.11.5",
+    "@storybook/addon-a11y": "6.0.10",
+    "@storybook/addon-actions": "6.0.10",
+    "@storybook/addon-controls": "6.0.10",
+    "@storybook/addon-docs": "6.0.10",
+    "@storybook/addon-knobs": "6.0.10",
+    "@storybook/addon-viewport": "6.0.10",
+    "@storybook/addons": "6.0.10",
+    "@storybook/core": "6.0.10",
+    "@storybook/react": "6.0.10",
+    "@storybook/theming": "6.0.10",
+    "@types/date-fns": "^2.6.0",
+    "@types/enzyme": "^3.10.5",
+    "@types/jest": "^26.0.8",
+    "@types/node": "10",
+    "@types/react": "^16.9.42",
+    "@types/react-dom": "^16.9.8",
+    "@types/styled-components": "^5.1.1",
+    "@types/styled-system": "^5.1.9",
+    "@types/throttle-debounce": "^2.1.0",
+    "@typescript-eslint/eslint-plugin": "^3.6.0",
+    "@typescript-eslint/parser": "^3.6.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.1.0",
+    "babel-loader": "^8.1.0",
+    "change-case": "^4.1.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "enzyme-to-json": "^3.5.0",
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "^2.10.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^2.7.0",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-typescript": "^0.14.0",
+    "gulp": "^4.0.2",
+    "gulp-filenames": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-svgmin": "^3.0.0",
+    "hex-rgb": "^4.1.0",
+    "husky": "^4.2.5",
+    "jest": "^26.4.2",
+    "jest-environment-jsdom": "^26.3.0",
+    "jest-styled-components": "^7.0.3",
+    "lint-staged": "^10.2.13",
+    "node-sass": "^4.14.1",
+    "prettier": "^2.0.5",
+    "react-docgen-typescript-plugin": "^0.5.2",
+    "react-is": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
+    "starwars-names": "^1.6.0",
+    "storybook-addon-jsx": "^7.3.4",
+    "stylelint": "^9.10.1",
+    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0",
+    "svgo": "^1.3.2",
+    "ts-jest": "^26.1.1",
+    "typescript": "^3.9.5"
+  },
+  "peerDependencies": {
+    "react": ">= 16.8.6",
+    "react-dom": ">= 16.8.6",
+    "styled-components": ">= 5.1.1",
+    "styled-system": ">= 5"
+  },
+  "scripts": {
+    "prepublish": "rm -rf lib && yarn build",
+    "build": "yarn build:js",
+    "start": "start-storybook -p 6007 -c .storybook",
+    "build-storybook": "build-storybook -c .storybook",
+    "test": "jest",
+    "lint": "yarn lint:css && yarn lint:js",
+    "lint:js": "eslint --ext .js,.jsx,.ts,.tsx src",
+    "lint:css": "stylelint ./src/**/*.{js,jsx,ts,tsx}",
+    "generate:icons": "gulp"
+  },
+  "jest": {
+    "rootDir": "./src",
+    "testURL": "http://localhost/",
+    "verbose": true,
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|css|scss)$": "<rootDir>/__mocks__/fileMock.js"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!lodash-es)",
+      "node_modules/(?!@storybook/addon-storyshots/*)"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "transform": {
+      "^.+\\.(ts|js)x?$": "ts-jest",
+      "^.+\\.mdx$": "@storybook/addon-docs/jest-transform-mdx"
+    },
+    "setupFiles": [
+      "raf/polyfill"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupTests.ts"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "yarn lint"
+    ],
+    "*.js": "yarn lint --cache --fix",
+    "*.{js,jsx,ts,tsx}": "stylelint --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn lint && yarn type-check",
+      "pre-commit": "yarn type-check && lint-staged"
+    }
+  },
+  "files": [
+    "lib",
+    "assets"
+  ],
+  "dependencies": {
+    "core-js": "^3.1.4",
+    "date-fns": "^2.14.0",
+    "export-to-csv": "*",
+    "react": "^16.13.1",
+    "react-dnd": "^11.1.3",
+    "react-dnd-html5-backend": "^11.1.3",
+    "react-dom": "^16.13.1",
+    "react-tiny-popover": "^5.1.0",
+    "react-transition-group": "^4.4.1",
+    "react-uuid": "^1.0.2",
+    "styled-components": "^5.1.1",
+    "styled-system": "^5.1.5",
+    "throttle-debounce": "^2.3.0",
+    "tinycolor2": "^1.4.2",
+    "use-resize-observer": "^6.1.0"
+  }
+}

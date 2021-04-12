@@ -1,0 +1,62 @@
+import { Meta, Props, Story } from '@storybook/addon-docs/blocks'
+import {
+  Flex,
+  useRippleEffect
+} from '../../..'
+import { RippleEffectExample } from './RippleEffect.example'
+
+<Meta title='hooks/useRippleEffect' />
+
+# useRippleEffect()
+
+#### Hook for adding ripple effect to a component
+
+<br />
+
+<Story name='Overview'>
+  <RippleEffectExample />
+</Story>
+
+<br /><br />
+
+## Usage
+To use `useRippleEffect` hook, parent component should have `relative` position.
+
+Since `ripple` creates a DOM element with `absolute` position, to prevent ripple effect
+to overlap content, child element(s) also have to be `relative` or `absolute` position with
+at least `1` z-index.
+
+To display effect at correct position, only the parent component should trigger the `mouseDownHandler`.
+
+You can prevent triggering from child element by adding `pointer-events: none` style to it.
+
+```jsx
+const FunctionalComponent = () => {
+  const [ripple, mouseDownHandler] = useRippleEffect()
+
+  return (
+    <ParentComponent onMouseDown={mouseDownHandler} style={{ position: 'relative' }}>
+      {ripple}
+      <ChildComponent style={{ position: 'relative', zIndex: 1, pointerEvents: 'none' }}>Click</ChildComponent>
+    </ParentComponent>
+  )
+}
+```
+
+<br />
+
+## Disable
+Ripple effect has timeout functions that removes ripple particles from the DOM after animation done. Sometimes this removing
+functions can be triggered after owner component such as `Button` unmount. It causes memory-leak since ripple state 
+tries to change after unmount. To prevent this, `disable` functionality added.
+Simply pass `disable` parameter and it won't trigger related functions.
+
+<Story name='Disable'>
+  <div noRipple>Button with Ripple Hook defined but it's disabled</div>
+</Story>
+
+```jsx
+const [ripple, mouseDownHandler] = useRippleEffect({
+  disable: true | false
+})
+```

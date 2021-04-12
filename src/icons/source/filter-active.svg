@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>97B31EFA-6993-4E83-8B24-CDDAE6E02348</title>
+    <g id="Style-Guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-348.000000, -1111.000000)">
+            <g id="components/icon-button/accent/active" transform="translate(340.000000, 1103.000000)">
+                <g id="components/icon/filter/filter-active" transform="translate(8.000000, 8.000000)">
+                    <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                    <path d="M20.867884,4.49728539 L14.9912111,14.75 L14.9912111,14.75 L14.9912111,20 C14.9912111,20.5522847 14.5434958,21 13.9912111,21 L10.0046421,21 C9.45235731,21 9.00464206,20.5522847 9.00464206,20 L9.00464206,14.75 L9.00464206,14.75 L3.13212774,4.4970104 C2.85763647,4.0177683 3.02361982,3.40674668 3.50286192,3.13225542 C3.65416821,3.04559305 3.825505,3 3.99987232,3 L20.0002969,3 C20.5525817,3 21.0002969,3.44771525 21.0002969,4 C21.0002969,4.17447477 20.9546477,4.34591334 20.867884,4.49728539 Z" id="Combined-Shape" fill="#2574DB" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

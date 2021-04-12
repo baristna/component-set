@@ -1,0 +1,110 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks'
+import uuid from 'react-uuid'
+import * as icons from '..'
+import { IconsGrid, IconCard, IconName } from './styles.ts'
+import { Div, Body2, Subtitle1 } from '../../components'
+import { IconUser } from '../../icons';
+
+<Meta title='Foundation/Icon' />
+
+# ICON
+#### Documentation of Icon React component
+
+<br /><br />
+
+## Usage
+
+```jsx
+import { [ICON_NAME] } from 'component-set'
+
+<[ICON_NAME] {...props} />
+```
+
+```jsx
+import * as Icons from 'component-set'
+
+<Icons.IconName {...props} />
+```
+
+<br /><br />
+
+## Size
+<Story name='Size'>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th width='100px'><Body2>24px</Body2></th>
+          <th width='100px'><Body2>32px</Body2></th>
+          <th width='100px'><Body2>48px</Body2></th>
+          <th width='100px'><Body2>96px</Body2></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align='center'><IconUser /></td>
+          <td align='center'><IconUser size={32} /></td>
+          <td align='center'><IconUser size={48} /></td>
+          <td align='center'><IconUser size={96} /></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</Story>
+
+```jsx
+<IconUser />
+<IconUser size={32} />
+<IconUser size={48} />
+<IconUser size={96} />
+```
+
+<br /><br />
+
+## Color
+You can use <a href='?path=/docs/foundation-colors--page'>project colors</a>.
+
+<Story name='Color guide'>
+  <div>
+    <IconUser size={36} color='primary' />
+    <IconUser size={36} color='success' />
+    <IconUser size={36} color='warning' />
+    <IconUser size={36} color='error' />
+    <IconUser size={36} color='info' />
+  </div>
+</Story>
+
+```jsx
+<IconUser size={36} color='accent-default' />
+<IconUser size={36} color='success' />
+<IconUser size={36} color='warning' />
+<IconUser size={36} color='error' />
+<IconUser size={36} color='info' />
+```
+
+<br /><br />
+
+## Adding New Icon to The Set
+To add new icons to the set, svg files needs to be added to the `src/icons/source`
+and then `yarn generate:icons` should run to update icon library form the source svg path.
+
+```bash
+yarn generate:icons
+```
+
+
+<br /><br />
+
+## Library
+<Story name='Library'>
+  <IconsGrid>
+    {Object.entries(icons).map(([name, IconComponent]) =>
+      <IconCard key={uuid()}>
+        <IconName>{name}</IconName>
+        <IconComponent />
+      </IconCard>
+    )}
+  </IconsGrid>
+</Story>
+
+<br /><br />

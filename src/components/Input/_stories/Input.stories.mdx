@@ -1,0 +1,234 @@
+import { useState } from 'react';
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks'
+import { Div } from '../../Div'
+import { Button } from '../../Button'
+import { IconUser, IconConfirm } from '../../../icons'
+import Input from '../Input'
+
+<Meta title='Components/Input/Documentation' />
+
+# Input
+The `<Input />` wrapper component is a complete form control including a label, input and help text.
+
+<br />
+
+<Story name='Overview'>
+  {() => {
+    const [val, setVal] = useState('');
+    return (
+      <Div>
+        <Input
+          value={val}
+          onChange={(e) => {
+            setVal(e.currentTarget.value);
+          }}
+        />
+      </Div>
+    );
+  }}
+</Story>
+
+<br /><br />
+
+## Usage
+
+```jsx
+import { Input } from 'component-set';
+
+const [value, setValue] = useState('');
+return (
+  <Input value={value} onChange={(e) => setValue(e.currentTarget.value)} />
+)
+```
+
+<br /><br />
+
+## Multiline
+<Story name='Multiline'>
+  {() => {
+    const [val, setVal] = useState('');
+    return (
+      <Div>
+        <Input
+          multiline
+          value={val}
+          height={8}
+          onChange={(e) => {
+            setVal(e.currentTarget.value);
+          }}
+        />
+      </Div>
+    );
+  }}
+</Story>
+
+```jsx
+<Input label='label' {...otherProps} />
+```
+
+<br /><br />
+
+## Label
+<Story name='Label'>
+  {() => {
+    const [val, setVal] = useState('');
+    return (
+      <Div>
+        <Input
+          label='Label'
+          value={val}
+          onChange={(e) => {
+            setVal(e.currentTarget.value);
+          }}
+        />
+      </Div>
+    );
+  }}
+</Story>
+
+```jsx
+<Input label='label' {...otherProps} />
+```
+
+<br /><br />
+
+## States
+`active` state represent a variation that value is exist
+
+<Story name='States'>
+  <Div mb={2}>
+    <Input label='Active' value='Text' active />
+  </Div>
+  <Div>
+    <Input label='Focused' focused />
+  </Div>
+</Story>
+
+```jsx
+<Input label='Active' active {...otherProps}  />
+<Input label='Focused' focused {...otherProps}  />
+```
+
+<br /><br />
+
+## Placeholder
+<Story name='Placeholder'>
+  {() => {
+    const [val, setVal] = useState('');
+    return (
+      <Div>
+        <Input
+          placeholder='placeholder'
+          value={val}
+          onChange={(e) => {
+            setVal(e.currentTarget.value);
+          }}
+        />
+      </Div>
+    );
+  }}
+</Story>
+
+```jsx
+<Input placeholder='placeholder' {...otherProps} />
+```
+
+<br /><br />
+
+## Icon
+<Story name='Icon'>
+  {() => {
+    const [val, setVal] = useState('');
+    return (
+      <Div>
+        <Input
+          label='With Icon'
+          name='input1'
+          icon={<IconConfirm color='border' />}
+          onIconClick={(e) => { console.log(e); }}
+          value={val}
+          onChange={(e) => {
+            setVal(e.currentTarget.value);
+          }}
+        />
+      </Div>
+    );
+  }}
+</Story>
+
+```jsx
+<Input
+  name='input1'
+  icon={<IconConfirm color='border' />}
+  onIconClick={(e) => { console.log(e.name, e.value); }}
+/>
+```
+
+<br /><br />
+
+## Disabled
+<Story name='Disabled'>
+  <Div>
+    <Input
+      disabled
+      label='Disabled'
+    />
+  </Div>
+</Story>
+
+```jsx
+<Input disabled {...otherProps} />
+<Input disabled disabled={true} {...otherProps} />
+```
+
+<br /><br />
+
+## Error
+<Story name='Error'>
+  {() => {
+    const [val, setVal] = useState('');
+    return (
+      <Div>
+        <Input
+          error
+          label='Error'
+          value={val}
+          onChange={(e) => {
+            setVal(e.currentTarget.value);
+          }}
+        />
+      </Div>
+    );
+  }}
+</Story>
+
+```jsx
+<Input error {...otherProps} />
+<Input error={true} {...otherProps} />
+```
+
+<br /><br />
+
+## Success
+<Story name='Success'>
+  {() => {
+    const [val, setVal] = useState('');
+    return (
+      <Div>
+        <Input
+          success
+          label='Success'
+          value={val}
+          onChange={(e) => {
+            setVal(e.currentTarget.value);
+          }}
+        />
+      </Div>
+    );
+  }}
+</Story>
+
+```jsx
+<Input success {...otherProps} />
+<Input success={true} {...otherProps} />
+```

@@ -1,0 +1,84 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks'
+import Grid from '../Grid'
+
+<Meta title='Foundation/Grid/Documentation' />
+
+# Grid
+
+<br /><br />
+
+## Usage
+
+<Story name='Overview'>
+  <Grid container>
+    <Grid bg='quaternary'>Item</Grid>
+  </Grid>
+</Story>
+
+```jsx
+import { Grid } from 'component-set';
+
+<Grid container>
+  <Grid>Item</Grid>
+</Grid>
+```
+
+<br /><br />
+
+## Spacing
+
+<Story name='Spacing'>
+  <Grid container spacing={16} bg='primary'>
+    <Grid bg='quaternary'>Item</Grid>
+    <Grid bg='quaternary'>Item</Grid>
+    <Grid bg='quaternary'>Item</Grid>
+  </Grid>
+</Story>
+
+```jsx
+<Grid container spacing={16}>
+  <Grid>Item</Grid>
+  <Grid>Item</Grid>
+  <Grid>Item</Grid>
+</Grid>
+```
+
+<br /><br />
+
+## Span
+
+<Story name='Span'>
+  <Grid container spacing={16} bg='primary'>
+    <Grid bg='quaternary' xs={6}>Item</Grid>
+    <Grid bg='quaternary' xs={3}>Item</Grid>
+    <Grid bg='quaternary' xs={3}>Item</Grid>
+  </Grid>
+</Story>
+
+```jsx
+<Grid container spacing={16}>
+  <Grid xs={6}>Item</Grid>
+  <Grid xs={3}>Item</Grid>
+  <Grid xs={3}>Item</Grid>
+</Grid>
+```
+
+<br /><br />
+
+## Responsive
+
+<Story name='Responsive'>
+  <Grid container spacing={16} bg='primary'>
+    <Grid bg='quaternary' xs={6} sm={6} md={4} lg={2}>Item</Grid>
+    <Grid bg='quaternary' xs={3} sm={3} md={4} lg={5}>Item</Grid>
+    <Grid bg='quaternary' xs={3} sm={3} md={4} lg={5}>Item</Grid>
+  </Grid>
+</Story>
+
+```jsx
+<Grid container spacing={16}>
+  <Grid xs={6}>Item</Grid>
+  <Grid xs={3}>Item</Grid>
+  <Grid xs={3}>Item</Grid>
+</Grid>
+```

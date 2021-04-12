@@ -1,0 +1,34 @@
+import { Meta, Props, Story } from '@storybook/addon-docs/blocks'
+import { Div } from '../../../components'
+
+
+<Meta title='Hooks/useArrayState' />
+
+# useArrayState()
+
+#### Hook for using state as array and update with using array index
+
+<br /><br />
+
+## Usage
+
+Defining a new array state
+
+```jsx
+import { useArrayState } from '../hooks'
+
+const [arrayState, setArrayState] = useArrayState(['first', 'second'])
+```
+
+Getting value
+As javascript array, state array starts at `0` index
+
+```jsx
+<Div>First Item {arrayState[0]}</Div>
+```
+
+Update/Set Value
+
+```jsx
+setArrayState(0, 'new value')
+```

@@ -1,0 +1,88 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks'
+import { colors, space } from '../../../theme'
+import { TypesExample } from './Types.example'
+import { TimeoutExample } from './Timeout.example'
+import { EventsExample } from './Events.example'
+
+<Meta title='Foundation/Effect/Documentation' />
+
+# Effect
+#### Effect is a wrapper component that handles css transitions
+
+<br /><br />
+
+## Usage
+```jsx
+import { Effect } from 'component-set'
+
+<Effect in={state}>...content...</Effect>
+```
+
+<br /><br />
+
+## Types
+<Story name="Types">
+  <div>
+    <TypesExample />
+  </div>
+</Story>
+
+```jsx
+// Default 'fade'
+<Effect in={state}>
+  <Box>Scale</Box>
+</Effect>
+
+<Effect type='scale' in={state}>
+  <Box>Scale</Box>
+</Effect>
+```
+
+<br /><br />
+
+## Timeout
+<Story name="Timeout">
+  <div>
+    <TimeoutExample timeout={300} />
+    <TimeoutExample timeout={5000} />
+    <TimeoutExample timeout={{ enter: 0, exit: 1000}} />
+  </div>
+</Story>
+
+```jsx
+// Default 300
+<Effect in={state}>
+  <Box>Fade</Box>
+</Effect>
+
+<Effect in={state} timeout={5000}>
+  <Box>Fade</Box>
+</Effect>
+
+<Effect in={state} timeout={{ enter: 0, exit: 1000}}>
+  <Box>Fade</Box>
+</Effect>
+```
+
+<br /><br />
+
+## Events
+<Story name="Events">
+  <div>
+    <EventsExample timeout={3000} />
+  </div>
+</Story>
+
+```jsx
+<Effect
+  in={state}
+  onEnter={() => setState('enter')}
+  onEntering={() => setState('entering')}
+  onEntered={() => setState('entered')}
+  onExit={() => setState('exit')}
+  onExiting={() => setState('exiting')}
+  onExited={() => setState('exited')}
+>
+  <Box>Fade</Box>
+</Effect>
+```

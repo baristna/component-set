@@ -1,0 +1,120 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks'
+import uuid from 'react-uuid'
+import { colors, space } from '../../../theme'
+import { Div } from '..'
+
+<!-- TODO: color names not working on stories. There is no problem in Div component itsel as well as stories that written with `storiesOf` method -->
+
+<Meta title='Foundation/Div/Spacing' />
+
+# Spacing
+
+#### Use the spacing helper to create consistent spacing between the elements of your UI.
+
+<br /><br />
+
+## Usage
+
+Spacing uses `styled-system` to apply properties to element styles.
+
+<br /><br />
+
+## Size
+<Story name='Size'>
+  <div>
+    {Object.entries(space).map(([name, size]) => (
+      <Div key={uuid()} mr={2} bg={'quaternary'} style={{ display: 'inline-block' }}>
+        <Div
+          bg={'bg-active'}
+          style={{ height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+          width={'50px'}
+          mb={parseFloat(name)}
+        >
+          {name}<br/>{size}px
+        </Div>
+      </Div>
+    ))}
+  </div>
+</Story>
+
+<br /><br />
+
+## Margin
+<Story name='Margin'>
+  <Div bg={'quaternary'} style={{ display: 'inline-block' }}>
+    <Div width={'100px'} margin={2} bg={'bg-active'} style={{ border: '2px dashed #999' }}>Div</Div>
+  </Div>
+</Story>
+
+```jsx
+<Div margin={2}>Div</Div>
+<Div m={2}>Div</Div>
+```
+
+## Padding
+<Story name='Padding'>
+  <Div bg={'bg-active'} style={{ display: 'inline-block', border: '2px dashed #999' }} padding={2}>
+    <Div width={'100px'}>Div</Div>
+  </Div>
+</Story>
+
+```jsx
+<Div padding={2}>Div</Div>
+<Div p={2}>Div</Div>
+```
+
+## Side
+
+**All can be applied as padding**
+<Story name='Side'>
+  <div style={{ display: 'flex', alignItems: 'flex-start'}}>
+    <Div mr={2} bg={'quaternary'}>
+      <Div width={'100px'} mt={2} bg={'bg-active'} style={{ border: '2px dashed #999' }}>Top</Div>
+    </Div>
+    <Div mr={2} bg={'quaternary'}>
+      <Div width={'100px'} mr={2} bg={'bg-active'} style={{ border: '2px dashed #999' }}>Right</Div>
+    </Div>
+    <Div mr={2} bg={'quaternary'}>
+      <Div width={'100px'} mb={2} bg={'bg-active'} style={{ border: '2px dashed #999' }}>Bottom</Div>
+    </Div>
+    <Div mr={2} bg={'quaternary'}>
+      <Div width={'100px'} ml={2} bg={'bg-active'} style={{ border: '2px dashed #999' }}>Left</Div>
+    </Div>
+  </div>
+</Story>
+
+```jsx
+<Div marginTop={2}>Top</Div>
+<Div mt={2}>Top</Div>
+
+<Div marginRight={2}>Right</Div>
+<Div mr={2}>Top</Div>
+
+<Div marginBottom={2}>Bottom</Div>
+<Div mb={2}>Top</Div>
+
+<Div marginLeft={2}>Left</Div>
+<Div ml={2}>Top</Div>
+```
+
+## Direction
+
+**All can be applied as padding**
+<Story name='Direction'>
+  <div style={{ display: 'flex', alignItems: 'flex-start'}}>
+    <Div mr={2} bg={'quaternary'}>
+      <Div width={'100px'} mx={2} bg={'bg-active'} style={{ border: '2px dashed #999' }}>X</Div>
+    </Div>
+    <Div mr={2} bg={'quaternary'}>
+      <Div width={'100px'} my={2} bg={'bg-active'} style={{ border: '2px dashed #999' }}>Y</Div>
+    </Div>
+  </div>
+</Story>
+
+```jsx
+<Div marginX={2}>X</Div>
+<Div mx={2}>X</Div>
+
+<Div marginY={2}>Y</Div>
+<Div my={2}>Y</Div>
+```

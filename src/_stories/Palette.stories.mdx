@@ -1,0 +1,14 @@
+import { Meta, ColorPalette, ColorItem, Story } from '@storybook/addon-docs/blocks';
+import uuid from 'react-uuid'
+import { palette } from '../theme';
+
+
+<Meta title="Foundation/Colors/Palette" />
+
+## Palette
+<br />
+<ColorPalette>
+  {Object.entries(palette).map(([key, value])=>(
+    <ColorItem key={uuid()} title={`${key}`} subtitle={`${value}`} colors={[`${value}`]} />
+  ))}
+</ColorPalette>

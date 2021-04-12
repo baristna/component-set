@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>7AA2F66F-F5D2-4A8F-B874-AF8910014209</title>
+    <g id="Style-Guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-992.000000, -1333.000000)">
+            <g id="components/icon-button/accent/accent-light-active-bg/disabled-focused" transform="translate(984.000000, 1325.000000)">
+                <g id="components/icon/export" transform="translate(8.000000, 8.000000)">
+                    <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                    <path d="M19,12 L19,19 L5,19 L5,12 L3,12 L3,19 C3,20.1 3.9,21 5,21 L19,21 C20.1,21 21,20.1 21,19 L21,12 L19,12 Z M11,6.83 L8.41,9.41 L7,8 L12,3 L17,8 L15.59,9.41 L13,6.83 L13,16.5 L11,16.5 L11,6.83 Z" id="Shape" fill="#9FA9B7" fill-rule="nonzero" opacity="0.803571429"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

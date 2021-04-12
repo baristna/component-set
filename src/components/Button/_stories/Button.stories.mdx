@@ -1,0 +1,201 @@
+import { Fragment } from 'react';
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks'
+import { Button, styleVariants } from '..'
+import { Div } from '../../Div'
+import { Grid } from '../../Grid'
+import { IconUser } from '../../../icons'
+
+<Meta title='Components/Button/Documentation' />
+
+# Button
+Buttons allow users to take actions, and make choices, with a single tap.
+
+<br />
+
+<Story name='Overview'>
+  <Button>Button</Button>
+</Story>
+
+<br /><br />
+
+## Usage
+
+```jsx
+import { Button } from 'component-set';
+
+<Button>Button Text</Button>
+```
+
+<br /><br />
+
+## Variant
+<Story name='Variant'> {() => {
+  return (
+    <Div>
+      {
+        Object.keys(styleVariants().variants).map(variantName => (
+          <Button key={variantName} variant={variantName} mr={1} mb={1}>{variantName}</Button>
+        ))
+      }
+    </Div>
+  )
+}}
+</Story>
+
+```jsx
+<Button variant='primary'>Primary</Button>
+<Button variant='secondary'>Secondary</Button>
+```
+
+<br /><br />
+
+## Cut
+<Story name='Cut'>
+{() => {
+  return (
+    <Div>
+      {
+        Object.keys(styleVariants().variants).map(variantName => (
+          <Div key={variantName}>
+            <Button variant={variantName} mr={1} mb={1}>{variantName}</Button>
+            <Button variant={variantName} cut='invert' mr={1} mb={1}>{variantName} Invert</Button>
+            <Button variant={variantName} cut='ghost' mr={1} mb={1}>{variantName} Ghost</Button>
+          </Div>
+        ))
+      }
+    </Div>
+  )
+}}
+</Story>
+
+```jsx
+<Button variant='primary'>Primary</Button>
+<Button variant='primary' cut='invert'>Primary Invert</Button>
+<Button variant='primary' cut='ghost'>Primary Ghost</Button>
+```
+
+<br /><br />
+
+## Rise
+<Story name='Rise'>
+  <Div>
+    <Button rise='big' mr={1}>Big</Button>
+    <Button rise='normal' mr={1}>Normal (default)</Button>
+    <Button rise='small' mr={1}>Small</Button>
+    <Button rise='tiny' mr={1}>Tiny</Button>
+    <Button rise='none' mr={1}>None</Button>
+  </Div>
+</Story>
+
+```jsx
+<Button rise='big'>Big</Button>
+<Button rise='normal'>Normal (default)</Button>
+<Button rise='small'>Small</Button>
+<Button rise='tiny'>Tiny</Button>
+<Button rise='none'>None</Button>
+```
+
+<br /><br />
+
+## Spread
+<Story name='Spread'>
+  <Div>
+    <Div><Button spread='normal' mb={1}>Normal (default)</Button></Div>
+    <Div><Button spread='narrow' mb={1}>Narrow</Button></Div>
+    <Div><Button spread='wide' mb={1}>Wide</Button></Div>
+    <Div><Button spread='none' mb={1}>None</Button></Div>
+    <Div><Button spread='full' mb={1}>Full</Button></Div>
+  </Div>
+</Story>
+
+```jsx
+<Button spread='normal'>Normal (default)</Button>
+<Button spread='narrow'>Narrow</Button>
+<Button spread='wide'>Wide</Button>
+<Button spread='none'>None (css disabled for width)</Button>
+<Button spread='full'>Full</Button>
+```
+
+<br /><br />
+
+## Icon
+<Story name='Icon'>
+  <Div>
+    <Div mb={1}>
+      <Button before={<IconUser />} mr={1}>Left Icon</Button>
+      <Button after={<IconUser />} mr={1}>Right Icon</Button>
+      <Button before={<IconUser />} mr={1} spread='normal' rise='normal' />
+      <Button before={<IconUser />} mr={1} size={4} circle />
+    </Div>
+    <Button before={<IconUser />} mr={1} cut='invert'>Left Icon</Button>
+    <Button before={<IconUser />} mr={1} cut='invert' />
+    <Button before={<IconUser />} mr={1} cut='ghost'>Left Icon</Button>
+    <Button before={<IconUser />} mr={1} cut='ghost' />
+  </Div>
+</Story>
+
+```jsx
+<Button before={<IconUser />}>Left Icon</Button>
+<Button after={<IconUser />}>Right Icon</Button>
+<Button before={<IconUser />} spread='normal' rise='normal' />
+<Button before={<IconUser />} size={4} circle />
+
+<Button before={<IconUser />} cut='invert'>Left Icon</Button>
+<Button before={<IconUser />} cut='invert' />
+<Button before={<IconUser />} cut='ghost'>Left Icon</Button>
+<Button before={<IconUser />} cut='ghost' />
+```
+
+<br /><br />
+
+## Disabled
+<Story name='Disabled'>
+{() => {
+  return (
+    <Div>
+      {
+        Object.keys(styleVariants().variants).map(variantName => (
+          <Grid container>
+            <Grid xs={2}>
+              <Button disabled variant={variantName} mr={1} mb={1}>{variantName}</Button>
+            </Grid>
+            <Grid xs={2}>
+              <Button disabled variant={variantName} mr={1} cut='invert' mb={1}>
+                {variantName}
+              </Button>
+            </Grid>
+            <Grid xs={2}>
+              <Button disabled variant={variantName} mr={1} cut='ghost' mb={1}>
+                {variantName}
+              </Button>
+            </Grid>
+            <Grid xs={2}>
+              <Button disabled variant={variantName} before={<IconUser />} mr={1} mb={1}>
+                {variantName}
+              </Button>
+            </Grid>
+            <Grid xs={2}>
+              <Button disabled variant={variantName} after={<IconUser />} mr={1} mb={1}>
+                {variantName}
+              </Button>
+            </Grid>
+            <Grid xs={2}>
+              <Button disabled variant={variantName} before={<IconUser />} mr={1} mb={1} />
+            </Grid>
+          </Grid>
+        ))
+      }
+    </Div>
+  )
+}}
+  
+</Story>
+
+```jsx
+<Button disabled variant='primary'>Primary</Button>
+<Button disabled variant='primary' cut='invert'>Primary</Button>
+<Button disabled variant='primary' cut='ghost'>Primary</Button>
+<Button disabled variant='primary' before={<IconUser />}>Left Icon</Button>
+<Button disabled variant='primary' after={<IconUser />}>Right Icon</Button>
+<Button disabled variant='primary' before={<IconUser />} />
+```

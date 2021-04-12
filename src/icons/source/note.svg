@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>139285D6-3349-4090-84F2-6FFE6753558E</title>
+    <g id="Style-Guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-356.000000, -453.000000)">
+            <g id="components/icon/note" transform="translate(356.000000, 453.000000)">
+                <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                <path d="M16,4 L4,4 C2.9,4 2,4.9 2,6 L2,18.01 C2,19.11 2.9,20 4,20 L20,20 C21.1,20 22,19.1 22,18 L22,10 L16,4 L16,4 Z M4,18.01 L4,6 L15,6 L15,11 L20,11 L20,18.01 L4,18.01 L4,18.01 Z" id="Shape" fill="#252B31" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

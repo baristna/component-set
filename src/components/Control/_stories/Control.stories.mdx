@@ -1,0 +1,106 @@
+import { useState } from 'react';
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks'
+import { Control } from '..'
+import { Div } from '../../Div'
+import { Grid } from '../../Grid'
+
+<Meta title='Components/Control/Documentation' />
+
+# Control
+Controls allow users to take actions, and make choices, with a single tap.
+
+<br />
+
+<Story name='Overview'>
+  <Control type='checkbox' />
+</Story>
+
+<br /><br />
+
+## Usage
+
+```jsx
+import { Control } from 'component-set';
+
+<Control type='[TYPE]' />
+```
+
+<br /><br />
+
+## Checkbox
+<Story name='Checkbox'>
+{() => {
+  const [Checkbox1, setCheckbox1] = useState(false);
+  const [Checkbox2, setCheckbox2] = useState(false);
+  return (
+    <Div mb={2}>
+      <Div>
+        <Control id='chk1' checked={Checkbox1} onChange={setCheckbox1} type='checkbox' />
+      </Div>
+      <Div>
+        <Control id='chk2' checked={Checkbox2} onChange={setCheckbox2} type='checkbox' />
+      </Div>
+    </Div>
+  )
+}}
+</Story>
+
+```jsx
+const [radio1, setRadio1] = useState('');
+
+<Control id='rd1' value='true' checked={radio1} onChange={setRadio1} type='radio' />
+<Control id='rd2' value='false' checked={radio1} onChange={setRadio1} type='radio' />
+```
+
+<br /><br />
+
+## switch
+<Story name='switch'>
+{() => {
+  const [switch1, setswitch1] = useState(false);
+  const [switch2, setswitch2] = useState(false);
+  return (
+    <Div mb={2}>
+      <Div>
+        <Control id='sw1' checked={switch1} onChange={setswitch1} type='switch' />
+      </Div>
+      <Div>
+        <Control id='sw2' checked={switch2} onChange={setswitch2} type='switch' />
+      </Div>
+    </Div>
+  )
+}}
+</Story>
+
+```jsx
+const [radio1, setRadio1] = useState('');
+
+<Control id='rd1' value='true' checked={radio1} onChange={setRadio1} type='radio' />
+<Control id='rd2' value='false' checked={radio1} onChange={setRadio1} type='radio' />
+```
+
+<br /><br />
+
+## Radio
+<Story name='Radio'>
+{() => {
+  const [radio1, setRadio1] = useState('');
+  return (
+    <Div mb={2}>
+      <Div>
+        <Control id='rd1' value='true' checked={radio1} onChange={setRadio1} type='radio' />
+      </Div>
+      <Div>
+        <Control id='rd2' value='false' checked={radio1} onChange={setRadio1} type='radio' />
+      </Div>
+    </Div>
+  )
+}}
+</Story>
+
+```jsx
+const [radio1, setRadio1] = useState('');
+
+<Control id='rd1' value='true' checked={radio1} onChange={setRadio1} type='radio' />
+<Control id='rd2' value='false' checked={radio1} onChange={setRadio1} type='radio' />
+```

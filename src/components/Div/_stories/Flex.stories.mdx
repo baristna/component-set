@@ -1,0 +1,224 @@
+import { Meta, Props } from '@storybook/addon-docs/blocks'
+import uuid from 'react-uuid'
+import { Div } from '..'
+import { colors } from '../../../theme'
+
+<Meta title='Foundation/Div/Flex' />
+
+# Flex
+
+##### Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexDiv utilities.
+
+`Div` component supports all of the <a href='https://styled-system.com/api/#flexbox'>flexbox</a> props
+
+<br /><br />
+
+## Usage
+
+```jsx
+import { Div } from 'component-set'
+
+<Div display='flex'>
+  /** Content here **/
+</Div>
+```
+
+<br /><br />
+
+## Direction
+default is `row`
+<Story name='Direction'>
+  <div>
+    <Div display='flex'>
+      {['row', 'column'].map(property => (
+        <Div display='flex' key={uuid()} p={2} flex='0 0 calc(100% / 6)'>
+          <Div display='flex' bg={colors['primaryLightest']} height={150} width={'100%'} flexDirection={property}  flexWrap='wrap'>
+            {[1,2,3].map(() =>
+              <Div display='flex' key={uuid()} m={1} bg={colors['quaternary']} height={30} width={30} flex='0 0 calc((100% / 3) - 16px)' />
+            )}
+          </Div>
+        </Div>
+      ))}
+    </Div>
+  </div>
+</Story>
+
+```jsx
+<Div display='flex' flexDirection='row'>[Content]</Div>
+<Div display='flex' flexDirection='column'>[Content]</Div>
+```
+
+<br/><br/>
+
+## Wrap
+default is `no-wrap`
+<Story name='Wrap'>
+  <div>
+    <Div display='flex'>
+      {['wrap', 'no-wrap'].map(property => (
+        <Div display='flex' key={uuid()} p={2} flex='0 0 calc(100% / 6)'>
+          <Div display='flex' bg={colors['primaryLightest']} height={150} width={'100%'} alignContent='flex-start' flexWrap={property}>
+            {[1,2,3,4].map(() =>
+              <Div display='flex' key={uuid()} m={1} bg={colors['quaternary']} height={30} flex='0 0 calc((100% / 3) - 16px)' />
+            )}
+          </Div>
+        </Div>
+      ))}
+    </Div>
+  </div>
+</Story>
+
+```jsx
+<Div display='flex' flexWrap='wrap'>[Content]</Div>
+<Div display='flex' flexWrap='no-wrap'>[Content]</Div>
+```
+
+<br/><br/>
+
+## Alignment
+
+<br/><br/>
+
+#### Align Items
+<Story name='Align Items'>
+  <div>
+    <Div display='flex'>
+      {['flex-start', 'center', 'flex-end', 'stretch'].map(property => (
+        <Div display='flex' key={uuid()} p={2} flex='0 0 calc(100% / 6)'>
+          <Div display='flex' bg={colors['primaryLightest']} height={150} width={'100%'} alignItems={property}  flexWrap='wrap'>
+            {[1,2].map(() =>
+              <Div display='flex' key={uuid()} m={1} bg={colors['quaternary']} minHeight={30} flex='0 0 calc((100% / 3) - 16px)' />
+            )}
+          </Div>
+        </Div>
+      ))}
+    </Div>
+  </div>
+</Story>
+
+```jsx
+<Div display='flex' alignItems='flex-start'>[Content]</Div>
+<Div display='flex' alignItems='center'>[Content]</Div>
+<Div display='flex' alignItems='flex-end'>[Content]</Div>
+<Div display='flex' alignItems='stretch'>[Content]</Div>
+```
+
+<br/><br/>
+
+
+#### Justify Content
+<Story name='Justify Content'>
+  <div>
+    <Div display='flex'>
+      {['flex-start', 'center', 'flex-end', 'space-between', 'space-around'].map(property => (
+        <Div display='flex' key={uuid()} p={2} flex='0 0 calc(100% / 6)'>
+          <Div display='flex' bg={colors['primaryLightest']} height={150} width={'100%'} justifyContent={property}  flexWrap='wrap'>
+            {[1,2].map(() =>
+              <Div display='flex' key={uuid()} m={1} bg={colors['quaternary']} height={30} flex='0 0 calc((100% / 3) - 16px)' />
+            )}
+          </Div>
+        </Div>
+      ))}
+    </Div>
+  </div>
+</Story>
+
+```jsx
+<Div display='flex' justifyContent='flex-start'>[Content]</Div>
+<Div display='flex' justifyContent='center'>[Content]</Div>
+<Div display='flex' justifyContent='flex-end'>[Content]</Div>
+<Div display='flex' justifyContent='space-between'>[Content]</Div>
+<Div display='flex' justifyContent='space-around'>[Content]</Div>
+```
+
+<br/><br/>
+
+#### Align Content
+<Story name='Align Content'>
+  <div>
+    <Div display='flex'>
+      {['flex-start', 'center', 'flex-end', 'stretch', 'space-between', 'space-around'].map(property => (
+        <Div display='flex' key={uuid()} p={2} flex='0 0 calc(100% / 6)'>
+          <Div display='flex' bg={colors['primaryLightest']} height={150} width={'100%'} alignContent={property} flex='1 1 auto' flexWrap='wrap'>
+            {[1,2,3,4,5,6].map(() =>
+              <Div display='flex' key={uuid()} m={1} bg={colors['quaternary']} minHeight={30} flex='0 0 calc((100% / 3) - 16px)' />
+            )}
+          </Div>
+        </Div>
+      ))}
+    </Div>
+  </div>
+</Story>
+
+```jsx
+<Div display='flex' alignContent='flex-start'>[Content]</Div>
+<Div display='flex' alignContent='center'>[Content]</Div>
+<Div display='flex' alignContent='flex-end'>[Content]</Div>
+<Div display='flex' alignContent='stretch'>[Content]</Div>
+<Div display='flex' alignContent='space-between'>[Content]</Div>
+<Div display='flex' alignContent='space-around'>[Content]</Div>
+```
+
+<br/><br/>
+
+## Child Element Properties
+
+<Story name='Child Element Properties'>
+  <div>
+    <Div display='flex'>
+      <Div display='flex' p={2} flex='0 0 calc(100% / 6)'>
+        <Div display='flex' bg={colors['primaryLightest']} height={150} width={'100%'} flexWrap='wrap'>
+          <Div display='flex' m={1} bg={colors['info']} height={30} flex='1 1 auto' />
+          <Div display='flex' m={1} bg={colors['quaternary']} height={30} minWidth={`calc((100% / 3) - 16px)`} />
+        </Div>
+      </Div>
+      <Div display='flex' p={2} flex='0 0 calc(100% / 6)'>
+        <Div display='flex' bg={colors['primaryLightest']} height={150} width={'100%'} flexWrap='wrap'>
+          <Div display='flex' m={1} bg={colors['info']} height={30} flexBasis='50%' />
+          <Div display='flex' m={1} bg={colors['quaternary']} height={30} minWidth={`calc((100% / 3) - 16px)`} />
+        </Div>
+      </Div>
+      <Div display='flex' p={2} flex='0 0 calc(100% / 6)'>
+        <Div display='flex' bg={colors['primaryLightest']} height={150} width={'100%'} flexWrap='wrap'>
+          <Div display='flex' m={1} bg={colors['info']} alignSelf='flex-end' height={30} minWidth={`calc((100% / 3) - 16px)`} />
+          <Div display='flex' m={1} bg={colors['quaternary']} height={30} minWidth={`calc((100% / 3) - 16px)`} />
+          <Div display='flex' m={1} bg={colors['quaternary']} height={30} minWidth={`calc((100% / 3) - 16px)`} />
+        </Div>
+      </Div>
+      <Div display='flex' p={2} flex='0 0 calc(100% / 6)'>
+        <Div display='flex' bg={colors['primaryLightest']} height={150} width={'100%'} flexWrap='wrap'>
+          <Div display='flex' m={1} bg={colors['info']} order={1} height={30} minWidth={`calc((100% / 3) - 16px)`} />
+          <Div display='flex' m={1} bg={colors['quaternary']} height={30} minWidth={`calc((100% / 3) - 16px)`} />
+          <Div display='flex' m={1} bg={colors['quaternary']} height={30} minWidth={`calc((100% / 3) - 16px)`} />
+        </Div>
+      </Div>
+    </Div>
+  </div>
+</Story>
+
+```jsx
+<Div display='flex'>
+  <Div flex='1 1 auto'>[Content]</Div>
+  <Div>[Content]</Div>
+</Div>
+
+<Div display='flex'>
+  <Div flexBasis='50%'>[Content]</Div>
+  <Div>[Content]</Div>
+</Div>
+
+<Div display='flex'>
+  <Div alignSelf='flex-end'>[Content]</Div>
+  <Div>[Content]</Div>
+  <Div>[Content]</Div>
+</Div>
+
+<Div display='flex'>
+  <Div order='1'>[Content]</Div>
+  <Div order='0'>[Content]</Div>
+  <Div order='0'>[Content]</Div>
+</Div>
+```
+
+## Other Props
+<Props of={Div} />

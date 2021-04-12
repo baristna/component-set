@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>5626AA8C-9F39-4855-B3C6-2985B9336E09</title>
+    <defs>
+        <polygon id="path-1" points="16.59 7.58 10 14.17 7.41 11.59 6 13 10 17 18 9"></polygon>
+    </defs>
+    <g id="Style-Guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-316.000000, -565.000000)">
+            <g id="components/icon/checkmark" transform="translate(316.000000, 565.000000)">
+                <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Shape" fill="#252B31" fill-rule="nonzero" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>F5F2B0C9-097F-4F7D-9523-4029329B0861</title>
+    <g id="Style-Guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-226.000000, -2760.000000)">
+            <g id="components/icon-button/secondary/pressed" transform="translate(218.000000, 2752.000000)">
+                <g id="components/icon/pin/pin-unpinned" transform="translate(7.000000, 7.000000)">
+                    <polygon id="Path" points="1 1 25 1 25 25 1 25"></polygon>
+                    <path d="M17,3 C17.5522847,3 18,3.44771525 18,4 L18,8.76393202 C18,8.91917712 18.0361451,9.07229018 18.1055728,9.21114562 L20.8944272,14.7888544 C20.9638549,14.9277098 21,15.0808229 21,15.236068 L21,18 C21,18.5522847 20.5522847,19 20,19 L14,19 L14,23 L12,23 L12,19 L6,19 C5.44771525,19 5,18.5522847 5,18 L5,15.236068 C5,15.0808229 5.03614509,14.9277098 5.10557281,14.7888544 L7.89442719,9.21114562 C7.96385491,9.07229018 8,8.91917712 8,8.76393202 L8,4 C8,3.44771525 8.44771525,3 9,3 L17,3 Z M16,4.999 L10,4.999 L10,8.76393202 C10,9.15204476 9.92469773,9.53571577 9.77906274,9.89389366 L9.68328157,10.1055728 L7,15.471 L7,16.999 L19,16.999 L19,15.473 L16.3167184,10.1055728 C16.1431491,9.75843422 16.0389186,9.38159224 16.0089965,8.99609825 L16,8.76393202 L16,4.999 Z" id="Combined-Shape" fill="#525C69" fill-rule="nonzero" transform="translate(13.000000, 13.000000) rotate(45.000000) translate(-13.000000, -13.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

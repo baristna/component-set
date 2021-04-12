@@ -1,0 +1,149 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import { Div } from '../Div'
+import {
+  Title, Subtitle1, Subtitle2, Legend,
+  Body1, Body2, ButtonText, Section, Caption
+} from './Typography';
+
+<Meta title="Foundation/Typography/Documentation" />
+
+## Usage
+```jsx
+import {
+  Title, Subtitle1, Subtitle2, Legend,
+  Body1, Body2, ButtonText,
+  Section, Caption, Text
+} from 'component-set';
+
+
+<Title>Title</Title>
+<Subtitle1>Subtitle1</Subtitle1>
+<Subtitle2>Subtitle2</Subtitle2>
+<Legend>Legend</Legend>
+<Body1>Body1</Body1>
+<Body2>Body2</Body2>
+<ButtonText>ButtonText</ButtonText>
+<Section>Section</Section>
+<Caption>Caption</Caption>
+<Text>Text</Text>
+```
+
+### Style Guide
+#### Type Scale
+There are 9 styles in the new typography set.
+Most body text in tables, forms, etc, will use the Body 2 style (14px), large blocks of body copy use Body 1 (16px)
+while primary header will be Subtitle 1 and 2 styles (20px).
+
+Title can be used for emphasis on large body copy sections, or empty screens.
+
+Legend corresponds to the form Legends titles,
+Captions are text fields labels.
+
+Medium weight variants can be used for Body 1 and 2 for emphasis and when using white text on dark backgrounds.
+
+Supported properties <a href='https://styled-system.com/api/#typography'>here</a>
+
+<Story name="Style Guide">
+  <Div display='flex' flexDirection='column'>
+    <Div display='flex' justifyContent='space-between' my={1}>
+      <Div display='flex' width='250px'>
+        <Subtitle1>Scale Category</Subtitle1>
+      </Div>
+      <Div display='flex' flexDirection='column' width='250px'>
+        <Div display='flex'>Font-Family, Weight, Size</Div>
+        <Caption>Line height, Letter Space</Caption>
+        <Caption>Case</Caption>
+      </Div>
+    </Div>
+    <Div display='flex' justifyContent='space-between' my={1}>
+      <Div display='flex' width='250px'>
+        <Title>Title</Title>
+      </Div>
+      <Div display='flex' flexDirection='column' width='250px'>
+        <Div display='flex'>OpenSans, Regular, 24px</Div>
+        <Caption>Line height: 1.33, Letter Space: normal</Caption>
+        <Caption>Sentence</Caption>
+      </Div>
+    </Div>
+    <Div display='flex' justifyContent='space-between' my={1}>
+      <Div display='flex' width='250px'>
+        <Subtitle1>Subtitle1</Subtitle1>
+      </Div>
+      <Div display='flex' flexDirection='column' width='250px'>
+        <Div display='flex'>OpenSans, Medium, 20px</Div>
+        <Caption>Line height: 1.4, Letter Space: normal</Caption>
+        <Caption>Sentence</Caption>
+      </Div>
+    </Div>
+    <Div display='flex' justifyContent='space-between' my={1}>
+      <Div display='flex' width='250px'>
+        <Subtitle2>Subtitle2</Subtitle2>
+      </Div>
+      <Div display='flex' flexDirection='column' width='250px'>
+        <Div display='flex'>OpenSans, Regular, 20px</Div>
+        <Caption>Line height: 1.4, Letter Space: normal</Caption>
+        <Caption>Sentence</Caption>
+      </Div>
+    </Div>
+    <Div display='flex' justifyContent='space-between' my={1}>
+      <Div display='flex' width='250px'>
+        <Legend>Legend</Legend>
+      </Div>
+      <Div display='flex' flexDirection='column' width='250px'>
+        <Div display='flex'>OpenSans, Medium, 16px</Div>
+        <Caption>Line height: 1.5, Letter Space: normal</Caption>
+        <Caption>Sentence</Caption>
+      </Div>
+    </Div>
+    <Div display='flex' justifyContent='space-between' my={1}>
+      <Div display='flex' width='250px'>
+        <Body1>Body1</Body1>
+      </Div>
+      <Div display='flex' flexDirection='column' width='250px'>
+        <Div display='flex'>OpenSans, Regular, 16px</Div>
+        <Caption>Line height: 1.5, Letter Space: normal</Caption>
+        <Caption>Sentence</Caption>
+      </Div>
+    </Div>
+    <Div display='flex' justifyContent='space-between' my={1}>
+      <Div display='flex' width='250px'>
+        <Body2>Body2</Body2>
+      </Div>
+      <Div display='flex' flexDirection='column' width='250px'>
+        <Div display='flex'>OpenSans, Regular, 14px</Div>
+        <Caption>Line height: 1.43, Letter Space: normal</Caption>
+        <Caption>Sentence</Caption>
+      </Div>
+    </Div>
+    <Div display='flex' justifyContent='space-between' my={1}>
+      <Div display='flex' width='250px'>
+        <Button>Button</Button>
+      </Div>
+      <Div display='flex' flexDirection='column' width='250px'>
+        <Div display='flex'>OpenSans, Medium, 14px</Div>
+        <Caption>Line height: 1.43, Letter Space: 1.25</Caption>
+        <Caption>All Caps</Caption>
+      </Div>
+    </Div>
+    <Div display='flex' justifyContent='space-between' my={1}>
+      <Div display='flex' width='250px'>
+        <Section>Section</Section>
+      </Div>
+      <Div display='flex' flexDirection='column' width='250px'>
+        <Div display='flex'>OpenSans, Medium, 12px</Div>
+        <Caption>Line height: 1.67, Letter Space: 0.2</Caption>
+        <Caption>All Caps</Caption>
+      </Div>
+    </Div>
+    <Div display='flex' justifyContent='space-between' my={1}>
+      <Div display='flex' width='250px'>
+        <Caption>Caption</Caption>
+      </Div>
+      <Div display='flex' flexDirection='column' width='250px'>
+        <Div display='flex'>OpenSans, Regular, 12px</Div>
+        <Caption>Line height: 1.33, Letter Space: 0.2</Caption>
+        <Caption>Sentence</Caption>
+      </Div>
+    </Div>
+  </Div>
+</Story>
